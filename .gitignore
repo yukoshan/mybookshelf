@@ -1,0 +1,5 @@
+venv/*
+mybookshelfproject/book/__pycache__
+mybookshelfproject/mybookshelfproject/__pycache__
+mybookshelfproject/book/__init__.py
+mybookshelfproject/mybookshelfproject/__init__.py
