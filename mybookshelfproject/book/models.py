@@ -10,12 +10,13 @@ RATE_CHOICES = [(x, str(x)) for x in range(1, MAX_RATE + 1)]
 class Book(models.Model):
     id = models.AutoField(auto_created=True, primary_key=True)
     title = models.CharField(max_length=100)
-    author = models.TextField(max_length=100)
-    models.DateField(default=date.today)
+    author = models.CharField(max_length=100)
+    readingdate = models.DateField(default=date.today)
     rate = models.IntegerField(choices=RATE_CHOICES, null=True)
     category = models.CharField(
         max_length=100,
-        choices = CATEGORY
+        choices = CATEGORY,
+        null=True
         )
     text = models.TextField(max_length=2000,null=True)
 
